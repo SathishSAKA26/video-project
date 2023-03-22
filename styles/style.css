@@ -66,3 +66,65 @@ a {
 li {
   list-style: none;
 }
+
+header {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+h1 {
+  color: var(--clr-white);
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.switch-btn {
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: 7%;
+  left: 7%;
+  width: 7rem;
+  height: 2rem;
+  display: flex;
+  border-radius: 6px;
+  align-items: center;
+  justify-content: space-around;
+  border: none;
+  cursor: pointer;
+  transition: calc(100% / 2);
+}
+
+.switch {
+  width: 50%;
+  height: 100%;
+  left: 0;
+  background-color: rgba(2, 72, 82, 0.685);
+  position: absolute;
+  border-radius: 6px;
+}
+
+.slide .switch {
+  left: 50%;
+}
